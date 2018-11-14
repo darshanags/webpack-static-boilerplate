@@ -117,7 +117,8 @@ module.exports = (env, argv) => {
 				use: [{
 					loader: 'file-loader',
 					options: {
-						outputPath: 'images/'
+						outputPath: 'images/',
+						name: '[name].[ext]'
 					}
 				}]
 			}, {
