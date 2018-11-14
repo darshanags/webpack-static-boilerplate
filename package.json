@@ -1,14 +1,16 @@
 {
 	"name": "wp4-static-boilerplate",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"wp-prod": "cross-env NODE_ENV=production webpack --mode production"
+		"wp-prod": "cross-env NODE_ENV=production webpack --mode production",
+		"wp-dev": "cross-env NODE_ENV=development webpack --mode development",
+		"watch": "nodemon --watch src/ --exec \"npm run wp-dev\" -e scss,js,pug"
 	},
 	"keywords": [],
 	"author": "Darsh",
-	"license": "ISC",
+	"license": "MIT",
 	"devDependencies": {
 		"@babel/core": "^7.1.5",
 		"@babel/preset-env": "^7.1.5",
@@ -32,6 +34,6 @@
 		"sass-loader": "^7.1.0",
 		"webpack": "^4.25.1",
 		"webpack-cli": "^3.1.2",
-		"webpack-entry-list": "^0.1.2"
+		"webpack-entry-list": "^1.0.1"
 	}
 }
